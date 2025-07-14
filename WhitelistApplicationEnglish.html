@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Whitelist Application - SouthSide Roleplay</title>
+    <link rel="icon" href="images/icon.png" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
+    <meta content="SouthSide RolePlay" name="description" >
+    <meta content="SouthSide RolePlay Sri Lanka" name="keywords" >
+    <meta content="BenX Development" name="author" >
+    <!-- CSS Files
+    ================================================== -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/plugins.css" rel="stylesheet" type="text/css" >
+    <link href="css/swiper.css" rel="stylesheet" type="text/css" >
+    <link href="css/style.css" rel="stylesheet" type="text/css" >
+    <link href="css/coloring.css" rel="stylesheet" type="text/css" >
+    <!-- color scheme -->
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
+
+    <style>
+        .success {
+            color: #4BB543;
+            padding: 10px;
+            margin-top: 20px;
+            border: 1px solid #4BB543;
+            border-radius: 4px;
+            display: none;
+        }
+        .error {
+            color: #ff3333;
+            padding: 10px;
+            margin-top: 20px;
+            border: 1px solid #ff3333;
+            border-radius: 4px;
+            display: none;
+        }
+        .form-section {
+            background: rgba(30, 30, 40, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #A020F0;
+        }
+        .form-section h4 {
+            color: #A020F0;
+            margin-bottom: 15px;
+        }
+        .character-info {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .character-info .field-set {
+            flex: 1;
+            min-width: 200px;
+        }
+        .required-field::after {
+            content: " *";
+            color: #ff3333;
+        }
+    </style>
+</head>
+
+<body class="dark-scheme">
+    <div id="wrapper">
+        <div class="float-text show-on-scroll">
+            <span><a href="#">Scroll To TOP</a></span>
+        </div>
+        <div class="scrollbar-v show-on-scroll"></div>
+        <!-- page preloader begin -->
+        <div id="de-loader"></div>
+        <!-- page preloader close -->
+
+        <!-- header begin -->
+        <header class="transparent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex sm-pt10">
+                            <div class="de-flex-col">
+                                <div class="de-flex-col">
+                                    <!-- logo begin -->
+                                    <div id="logo">
+                                        <a href="./index.html">
+                                            <img class="logo-main" src="images/logo.png" alt="" >
+                                            <img class="logo-mobile" src="images/logo.png" alt="" >
+                                        </a>
+                                    </div>
+                                    <!-- logo close -->
+                                </div>
+                            </div>
+                            <div class="de-flex-col header-col-mid">
+                                <ul id="mainmenu">
+                                    <li><a class="menu-item" href="./index.html">Home</a></li>
+                                    <li><a class="menu-item" href="./knowledgebase.html">Knowledgebase</a></li>
+                                    <li><a class="menu-item" href="./Announcement.html">Announcement</a></li>
+                                    <li><a class="menu-item" href="./WhitelistApplication.html">Whitelist Application</a>
+                                        <ul>
+                                            <li><a class="menu-item" href="./WhitelistApplicationEnglish.html">English</a></li>
+                                            <li><a class="menu-item" href="./WhitelistApplicationSinhala.html">සිංහල</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="de-flex-col">
+                                <div class="menu_side_area">
+                                    <a href="https://discord.gg/xaYXuEMJ5b" class="btn-line">Discord</a>
+                                    <span id="menu-btn"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+            <section>
+                <div class="container position-relative z1000">
+                    <div class="row">
+                        <div class="col-lg-10 offset-lg-1">
+                            <h2>Whitelist Application</h2>
+                            <p class="lead">
+                                All Fields Marked With <span style="color: #ff3333;">*</span> Are Required.
+                            </p>
+
+                            <form name="whitelistForm" id="whitelist_form" class="position-relative z1000" method="post">
+                                <!-- Personal Information Section -->
+                                <div class="form-section">
+                                    <h4>Personal Information</h4>
+                                    <div class="row gx-4">
+                                        <div class="col-lg-6 mb10">
+                                            <div class="field-set">
+                                                <span class="d-label required-field">Full Name</span>
+                                                <input type="text" name="full_name" id="full_name" class="form-control" placeholder="Your Full Name" required>
+                                            </div>
+
+                                            <div class="field-set">
+                                                <span class="d-label required-field">Discord Username</span>
+                                                <input type="text" name="discord" id="discord" class="form-control" placeholder="895396196217139230" required>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-lg-6 mb10">
+                                            <div class="field-set">
+                                                <span class="d-label required-field">Age</span>
+                                                <input type="number" name="age" id="age" class="form-control" placeholder="Your Age" min="16" max="99" required>
+                                            </div>
+
+                                            <div class="field-set">
+                                                <span class="d-label">Timezone</span>
+                                                <input type="text" name="timezone" id="timezone" class="form-control" placeholder="GMT +/-">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Character Information Section -->
+                                <div class="form-section">
+                                    <h4>Character Information</h4>
+                                    <div class="character-info">
+                                        <div class="field-set">
+                                            <span class="d-label required-field">First Name</span>
+                                            <input type="text" name="character_first" id="character_first" class="form-control" placeholder="Character's First Name" required>
+                                        </div>
+
+                                        <div class="field-set">
+                                            <span class="d-label required-field">Last Name</span>
+                                            <input type="text" name="character_last" id="character_last" class="form-control" placeholder="Character's Last Name" required>
+                                        </div>
+
+                                        <div class="field-set">
+                                            <span class="d-label required-field">Date of Birth</span>
+                                            <input type="text" name="character_dob" id="character_dob" class="form-control" placeholder="DD/MM/YYYY" required>
+                                        </div>
+
+                                        <div class="field-set">
+                                            <span class="d-label required-field">Gender</span>
+                                            <select name="character_gender" id="character_gender" class="form-control" required>
+                                                <option value="">Select Gender</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="field-set mt-3">
+                                        <span class="d-label required-field">Character Backstory</span>
+                                        <textarea name="character_backstory" id="character_backstory" class="form-control" placeholder="Tell Us About Your Character's Background, Motivations, And Personality (Minimum 200 Words)" rows="5" required></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Roleplay Experience Section -->
+                                <div class="form-section">
+                                    <h4>Roleplay Experience</h4>
+                                    <div class="field-set">
+                                        <span class="d-label required-field">Previous RP Experience</span>
+                                        <textarea name="rp_experience" id="rp_experience" class="form-control" placeholder="Describe Your Previous Roleplay Experience (Servers, Duration, Etc.)" required></textarea>
+                                    </div>
+
+                                    <div class="field-set mt-3">
+                                        <span class="d-label required-field">Why Do you Want To Join Our server?</span>
+                                        <textarea name="why_join" id="why_join" class="form-control" placeholder="Tell Us Why You want To Join Our Server" required></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- IC Questions Section -->
+                                <div class="form-section">
+                                    <h4>In-Character Questions</h4>
+                                    <div class="field-set">
+                                        <span class="d-label required-field">Your Character Hears a Loud Noise Outside At Night. You Will Investigate or Stay Inside?</span>
+                                        <textarea name="ic_question1" id="ic_question1" class="form-control" rows="3" required></textarea>
+                                    </div>
+
+                                    <div class="field-set mt-3">
+                                        <span class="d-label required-field">You Just Saw Something You Shouldn’t Have. And Now The Criminal Is Staring Straight At You. What Do You Do?</span>
+                                        <textarea name="ic_question2" id="ic_question2" class="form-control" rows="3" required></textarea>
+                                    </div>
+
+                                    <div class="field-set mt-3">
+                                        <span class="d-label required-field">Describe A Typical Day In Your Character's Life</span>
+                                        <textarea name="ic_question3" id="ic_question3" class="form-control" rows="3" required></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- OOC Questions Section -->
+                                <div class="form-section">
+                                    <h4>Out-of-Character Questions</h4>
+                                    <div class="field-set">
+                                        <span class="d-label required-field">How Do You Handle Conflict With Other Players OOC?</span>
+                                        <textarea name="ooc_question1" id="ooc_question1" class="form-control" rows="3" required></textarea>
+                                    </div>
+
+                                    <div class="field-set mt-3">
+                                        <span class="d-label required-field">What Do You Think Makes Good Roleplay?</span>
+                                        <textarea name="ooc_question2" id="ooc_question2" class="form-control" rows="3" required></textarea>
+                                    </div>
+
+                                    <div class="field-set mt-3">
+                                        <span class="d-label required-field">Do You Understand And Agree To Follow All Server Rules?</span>
+                                        <select name="agree_rules" id="agree_rules" class="form-control" required>
+                                            <option value="">Select Answer</option>
+                                            <option value="Yes">Yes, I Have Read And Agree To Follow All Rules</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                    
+                                <div id='submit' class="mt20">
+                                    <button type="submit" id='send_application' class="btn-main">Submit Application</button>
+                                </div>
+
+                                <div id="success_message" class='success'>
+                                    Your Whitelist Application Has Been Submitted Successfully! Our Staff Team Will Review It Shortly. Please Join Our Discord Server For Updates.
+                                </div>
+                                <div id="error_message" class='error'>
+                                    There Was An Error Submitting Your Application. Please Try Again Or Contact Us On Discord.
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- content close -->
+        <!-- footer begin -->
+        <footer>
+            <div class="subfooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="de-flex">
+                                <div class="de-flex-col">
+                                    <a href="">
+                                        SouthSide RolePlay © 2025
+                                    </a>
+                                </div>
+                                <div class="social-icons">
+                                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="https://discord.gg/tmvrp"><i class="fa-brands fa-discord"></i></a>
+                                    <a href="https://www.tiktok.com/@SouthSide_rp"><i class="fa-brands fa-tiktok"></i></a>
+                                    <a href="https://www.youtube.com/@SouthSideRoleplay"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer close -->
+    </div>
+    
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/designesia.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('whitelist_form');
+            const submitBtn = document.getElementById('send_application');
+            const successMsg = document.getElementById('success_message');
+            const errorMsg = document.getElementById('error_message');
+            
+            // Initially hide messages
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Hide messages
+                successMsg.style.display = 'none';
+                errorMsg.style.display = 'none';
+                
+                // Disable submit button to prevent multiple submissions
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Submitting...';
+                
+                // Get all form data
+                const formData = new FormData(form);
+                
+                // Send to PHP backend
+                fetch('WhitelistApplication.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        successMsg.style.display = 'block';
+                        form.reset();
+                        successMsg.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        throw new Error(data.message || 'Failed to submit application');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    errorMsg.style.display = 'block';
+                    errorMsg.scrollIntoView({ behavior: 'smooth' });
+                })
+                .finally(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Submit Application';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
